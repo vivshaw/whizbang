@@ -24,61 +24,63 @@ block jumbotron
     |  API development challenges.
 
 block content
-  .col-md-6
-    h2 Example usage:
-    p
-      code #{baseurl}query-goes-here
-      
-    h2 Example output:
-    p
-      code { "example": 1488501712, "data": "March 1, 2017" }
-      
-    h2 Try it!
-    p Describe query here
-    form(onsubmit='return go(\'' + baseurl + '\')')
-      label(for=url) Query: 
-      input(type='text' name='url' id='url')
-      button.btn.btn-primary Submit
-      
-  .col-md-6
-    h2 It's this easy:
-
-    ol
-      li
-        p
-          kbd git clone git-url
-          br
-          kbd cd api-landing-template/
-          br
-          kbd npm install
-          br
-          kbd npm run watch
+  .container
+      .row
+        .col-md-6
+          h2 Example usage:
+          p
+            code #{baseurl}query-goes-here
             
-      li
-        p
-          | Edit
-          code templates/index.pug
-          |  to configure your vars and write your content.
-          code baseurl
-          |  is your API's base url, 
-          code github
-          |  is your API's github repository, and
-          code octocatColors
-          |  are the background and foreground colors of the 
-          a(href='http://tholman.com/github-corners/') tholman
-          | -style GitHub corner
+          h2 Example output:
+          p
+            code { "example": 1488501712, "data": "March 1, 2017" }
+            
+          h2 Try it!
+          p Describe query here
+          form(onsubmit='return go(\'' + baseurl + '\')')
+            label(for=url) Query: 
+            input(type='text' name='url' id='url')
+            button.btn.btn-primary Submit
+            
+        .col-md-6
+          h2 It's this easy:
       
-      li
-        p
-          | Edit
-          code stylesheets/main.styl
-          |  to configure the jumbotron gradient colors with the vars
-          code bgLeft
-          |  and
-          code bgRight
-      
-      li
-        p Write your API! All changes will refresh live with nodemon.
-      
+          ol
+            li
+              p
+                kbd git clone git-url
+                br
+                kbd cd api-landing-template/
+                br
+                kbd npm install
+                br
+                kbd npm run watch
+                  
+            li
+              p
+                | Edit
+                code templates/index.pug
+                |  to configure your vars and write your content.
+                code baseurl
+                |  is your API's base url, 
+                code github
+                |  is your API's github repository, and
+                code octocatColors
+                |  are the background and foreground colors of the 
+                a(href='http://tholman.com/github-corners/') tholman
+                | -style GitHub corner
+            
+            li
+              p
+                | Edit
+                code stylesheets/main.styl
+                |  to configure the jumbotron gradient colors with the vars
+                code bgLeft
+                |  and
+                code bgRight
+            
+            li
+              p Write your API! All changes will refresh live with nodemon.
+            
 block scripts
   
