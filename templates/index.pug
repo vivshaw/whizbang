@@ -1,0 +1,84 @@
+extends default.pug
+
+block title
+  - var baseurl = 'https://your-api-here.com/api/'
+  - var github = 'https://github.com/vivshaw/timestamp-api'
+  - var octocatColors = ['#fff', '#6f5499']
+  
+  title API landing page template
+
+block jumbotron
+  h1.display-3 Whizbang: chrome up your API
+  p
+    | This is a landing page template for Node + Express APIs. The design priority
+    | is to give the user a responsive landing page with a quick rundown of what the API is and how it works, a link to
+    | the project GitHub, and a form to try it out. The dev workflow priority is to make
+    | a quick minimal-config solution so you can drop it in, forget it, and focus on actually writing your sweet new Express API.
+    | It's as easy as "git clone", "npm install" & editing one pug template, it has built-in automation with npm scripts,
+    | and it's even Heroku-ready. Built with pug, stylus, bootstrap, & npm for all-killer no-filler workflow magic.
+  p
+    | Inspired by
+    a(href = 'https://www.freecodecamp.com/') 
+      i.fa.fa-free-code-camp
+      |  FreeCodeCamp's
+    |  API development challenges.
+
+block content
+  .col-md-6
+    h2 Example usage:
+    p
+      code #{baseurl}query-goes-here
+      
+    h2 Example output:
+    p
+      code { "example": 1488501712, "data": "March 1, 2017" }
+      
+    h2 Try it!
+    p Describe query here
+    form(onsubmit='return go(\'' + baseurl + '\')')
+      label(for=url) Query: 
+      input(type='text' name='url' id='url')
+      button.btn.btn-primary Submit
+      
+  .col-md-6
+    h2 It's this easy:
+
+    ol
+      li
+        p
+          kbd git clone git-url
+          br
+          kbd cd api-landing-template/
+          br
+          kbd npm install
+          br
+          kbd npm run watch
+            
+      li
+        p
+          | Edit
+          code templates/index.pug
+          |  to configure your vars and write your content.
+          code baseurl
+          |  is your API's base url, 
+          code github
+          |  is your API's github repository, and
+          code octocatColors
+          |  are the background and foreground colors of the 
+          a(href='http://tholman.com/github-corners/') tholman
+          | -style GitHub corner
+      
+      li
+        p
+          | Edit
+          code stylesheets/main.styl
+          |  to configure the jumbotron gradient colors with the vars
+          code bgLeft
+          |  and
+          code bgRight
+      
+      li
+        p Write your API! All changes will refresh live with nodemon.
+      
+block scripts
+  

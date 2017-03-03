@@ -1,0 +1,38 @@
+doctype html
+html  
+  head
+    block title
+    
+    link(rel="icon" type="image/png" href="images/favicon.png" sizes="32x32")
+    link(rel='stylesheet' href='css/main.css')
+    link(rel='stylesheet prefetch'
+         href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'
+         integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ'
+         crossorigin='anonymous')
+    script(src='https://use.fontawesome.com/0e013528d3.js')
+    
+  body
+    include /node_modules/octopug/octopug.pug
+    +octopug(github, octocatColors[0], octocatColors[1])
+    
+    .jumbotron
+      .container
+        block jumbotron
+    
+    .container
+      .row
+        block content
+    
+    footer.footer
+      .container
+        span.text-muted
+          | Built with 
+          i.fa.fa-heart.with-heart
+          |  on Node.js
+    
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'
+           integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn'
+           crossorigin='anonymous')
+    script(src='js/go.js')
+    
+    block scripts
