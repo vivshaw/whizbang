@@ -58,10 +58,10 @@ block content
             code { "example": 1488501712, "data": "March 1, 2017" }
             
           h2 Try it!
-          p Describe query here
-          form(onsubmit='return go(\'' + baseurl + '\')')
-            label(for=url) Query: 
-            input(type='text' name='url' id='url')
+          p Describe query here, then edit the form to submit it properly.
+          form(method='GET' action=baseurl)
+            label(for=query) Query: 
+            input(type='text' name='query' id='query')
             button.btn.btn-primary Submit
             
         .col-md-6
