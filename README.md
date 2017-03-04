@@ -1,6 +1,8 @@
 # whizbang
 :zap: :boom: a quick minimal-config landing page starter for your sweet new Node + Express API
 
+![Whizbang screencap](https://vivshaw.github.io/whizbang/images/whizbang-screencap.png)
+
 This is a landing page template for Node + Express APIs. The design priority is to give the user
 a responsive landing page with a quick rundown of what the API is and how it works, a link to
 the project GitHub, and a form to try it out. The dev workflow priority is to make a
