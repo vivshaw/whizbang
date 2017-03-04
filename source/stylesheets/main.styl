@@ -3,6 +3,8 @@
 bgLeft = #00a86a
 bgRight = #6f5498
 
+footerHeight = '20px'
+
 .jumbotron
     background-color bgRight
     background-image -webkit-gradient(linear, left top, left bottom, from(bgLeft), to(bgRight))
@@ -22,16 +24,14 @@ bgRight = #6f5498
     margin-left 15px
 
 body 
-  /* Margin bottom by footer height */
-  margin-bottom 20px
+  margin-bottom footerHeight // Gotta leave space for the footer!
 
 .footer
   position absolute
   bottom 0
   width 100%
-  /* Set the fixed height of the footer here */
-  height 20px
-  line-height 20px /* Vertically center the text there */
+  height footerHeight // Fixed footer height
+  line-height footerHeight // Vertically center text
   background-color #f5f5f5
   text-transform uppercase
   text-align center
