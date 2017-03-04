@@ -3,7 +3,7 @@
 bgLeft = #00a86a
 bgRight = #6f5498
 
-footerHeight = '20px'
+footerHeight = 20px
 
 .jumbotron
     background-color bgRight
@@ -11,6 +11,7 @@ footerHeight = '20px'
     background-image -webkit-linear-gradient(top, bgLeft 0%, bgRight 100%)
     background-image -o-linear-gradient(top, bgLeft 0%, bgRight 100%)
     background-image linear-gradient(to right, bgLeft 0%, bgRight 100%)
+    margin-bottom 20px !important
     
 .jumbotron h1, .jumbotron p
     color white
@@ -23,18 +24,22 @@ footerHeight = '20px'
     margin-right 15px
     margin-left 15px
 
+html
+    position relative
+    min-height 100%
+
 body 
-  margin-bottom footerHeight // Gotta leave space for the footer!
+    margin-bottom footerHeight // Gotta leave space for the footer!
 
 .footer
-  position absolute
-  bottom 0
-  width 100%
-  height footerHeight // Fixed footer height
-  line-height footerHeight // Vertically center text
-  background-color #f5f5f5
-  text-transform uppercase
-  text-align center
- 
+    position absolute
+    bottom 0
+    width 100%
+    height footerHeight // Fixed footer height
+    line-height footerHeight // Vertically center text
+    background-color #f5f5f5
+    text-transform uppercase
+    text-align center
+
 .with-heart
     color red
