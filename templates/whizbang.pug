@@ -2,7 +2,7 @@ doctype html
 html  
   head
     block head
-    
+    //- Vendor assets
     link(rel="icon" type="image/png" href="images/favicon.png" sizes="32x32")
     link(rel='stylesheet' href='css/main.css')
     link(rel='stylesheet prefetch'
@@ -12,6 +12,7 @@ html
     script(src='https://use.fontawesome.com/0e013528d3.js')
     
   body
+    //- octopug GitHub corner mixin
     include /node_modules/octopug/octopug.pug
     +octopug(github, octocatColors[0], octocatColors[1])
     
@@ -29,10 +30,12 @@ html
           |  on Node.js / 
           | Fork me on 
           a(href=github) github
-          
+    
+    //- Vendor scripts
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'
            integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn'
            crossorigin='anonymous')
     script(src='js/go.js')
     
+    //- App scripts
     block scripts
